@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "HarveyTsang" => "13025483658@163.com" }
   spec.platform     = :ios, "9.0"
 
-  spec.source       = { :git => "http://github.com/HarveyTsang/HTMp3Audio.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/HarveyTsang/HTMp3Audio.git", :tag => "#{spec.version}" }
   spec.source_files  = "HTMp3Audio/*.{h,m}", "HTMp3Audio/lame/*.{h,m}"
   spec.vendored_libraries = "HTMp3Audio/lame/*.a"
 
