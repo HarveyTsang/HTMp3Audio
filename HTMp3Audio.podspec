@@ -13,18 +13,29 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
                    Useing lame for record mp3 format audio on iOS platform.
                    DESC
-
   spec.homepage     = "http://github.com/HarveyTsang"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "HarveyTsang" => "13025483658@163.com" }
+
   spec.platform     = :ios, "9.0"
-
   spec.source       = { :git => "https://github.com/HarveyTsang/HTMp3Audio.git", :tag => "#{spec.version}" }
-  spec.source_files  = "HTMp3Audio/*.{h,m}", "HTMp3Audio/lame/*.{h,m}"
-  spec.vendored_libraries = "HTMp3Audio/lame/*.a"
-
+  spec.source_files  = "HTMp3Audio/HTMp3Audio.h"
   spec.framework  = 'Foundation', 'AVFoundation'
-
   spec.requires_arc = true
+
+  spec.subspec 'Lame' do |ss|
+    ss.preserve_paths = 'HTMp3Audio/lame/lame.h'
+    ss.vendored_libraries = 'HTMp3Audio/lame/libmp3lame.a'
+    ss.libraries = 'mp3lame'
+    ss.xcconfig = {'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{spec.name}/HTMp3Audio/lame/lame.h"}
+    ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    ss.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  end
+
+  spec.subspec 'Record' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.ios.dependency 'HTMp3Audio/Lame'
+    ss.source_files = 'HTMp3Audio/HTMp3AudioRecorder.{h,m}'
+  end
 
 end

@@ -6,7 +6,7 @@
 //
 
 #import "HTMp3AudioRecorder.h"
-#import "lame.h"
+#import "lame/lame.h"
 
 static const int kMP3BufferCapacity = 4096;
 
