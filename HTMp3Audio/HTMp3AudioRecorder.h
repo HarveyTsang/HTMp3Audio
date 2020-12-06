@@ -21,13 +21,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HTMp3AudioRecorder : NSObject
 
+/// initializer
+/// @param url audio file save path
+/// @param settings support setting number of channels (by 'AVNumberOfChannelsKey'), sample rate(by 'AVSampleRateKey')
 - (nullable instancetype)initWithURL:(NSURL *)url settings:(NSDictionary *)settings;
 
+/// prepare to record. (optional call)
+/// @return Whether the preparation is successful
 - (BOOL)prepareToRecord;
 
 - (BOOL)record;
 
-- (BOOL)recordForDuration:(NSTimeInterval) duration;
+/// record audio of specified duration
+/// @param duration unit is second
+- (BOOL)recordForDuration:(NSTimeInterval)duration;
 
 - (void)pause;
 
@@ -41,10 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(readonly) NSURL *url;
 
-@property(readonly) float sampleRate;
-
+/// current recording time
 @property(readonly) NSTimeInterval currentTime;
-
+/// enable audio power measurement
 @property(getter=isMeteringEnabled) BOOL meteringEnabled;
 
 @property(readonly) AudioUnitParameterValue averagePower;
