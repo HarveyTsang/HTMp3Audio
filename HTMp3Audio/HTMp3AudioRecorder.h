@@ -10,12 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class HTMp3AudioRecorder;
-@protocol HTAudioRecorderDelegate <NSObject>
+@protocol HTMp3AudioRecorderDelegate <NSObject>
 
 @optional
 
 /* htAudioRecorderDidFinishRecording:successfully: is called when a recording has been finished or stopped. This method is NOT called if the recorder is stopped due to an interruption. */
-- (void)htAudioRecorderDidFinishRecording:(HTMp3AudioRecorder *)recorder successfully:(BOOL)flag;
+- (void)htMp3AudioRecorderDidFinishRecording:(HTMp3AudioRecorder *)recorder successfully:(BOOL)flag;
 
 @end
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)deleteRecording;
 
-@property(nonatomic, weak) id<HTAudioRecorderDelegate> delegate;
+@property(nonatomic, weak) id<HTMp3AudioRecorderDelegate> delegate;
 
 @property(readonly, getter=isRecording) BOOL recording;
 

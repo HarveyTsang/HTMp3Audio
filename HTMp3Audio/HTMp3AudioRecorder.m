@@ -148,8 +148,8 @@ typedef struct HTMP3RecorderSettings {
     _file = NULL;
     _currentTime = 0;
     _isPrepare = NO;
-    if ([self.delegate respondsToSelector:@selector(htAudioRecorderDidFinishRecording:successfully:)]) {
-        [self.delegate htAudioRecorderDidFinishRecording:self successfully:YES];
+    if ([self.delegate respondsToSelector:@selector(htMp3AudioRecorderDidFinishRecording:successfully:)]) {
+        [self.delegate htMp3AudioRecorderDidFinishRecording:self successfully:YES];
     }
 }
 
