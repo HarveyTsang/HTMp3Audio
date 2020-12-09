@@ -19,5 +19,6 @@ FOUNDATION_EXPORT const unsigned char HTMp3AudioVersionString[];
 #define _HTMp3Audio_
 
 #import <HTMp3Audio/HTMp3AudioRecorder.h>
+#import <HTMp3Audio/HTMp3FileConverter.h>
 
 #endif

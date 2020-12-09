@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// initializer
 /// @param url audio file save path
 /// @param settings support setting number of channels (by 'AVNumberOfChannelsKey'), sample rate(by 'AVSampleRateKey')
-- (nullable instancetype)initWithURL:(NSURL *)url settings:(NSDictionary *)settings;
+- (nullable instancetype)initWithURL:(NSURL *)url settings:(NSDictionary<NSString *, id> *)settings;
 
 /// prepare to record. (optional call)
 /// @return Whether the preparation is successful

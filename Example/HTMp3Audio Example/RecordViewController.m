@@ -5,10 +5,10 @@
 //  Created by HarveyTsang on 2020/12/4.
 //
 
-#import "ViewController.h"
+#import "RecordViewController.h"
 #import <HTMp3Audio/HTMp3Audio.h>
 
-@interface ViewController ()<HTMp3AudioRecorderDelegate>
+@interface RecordViewController ()<HTMp3AudioRecorderDelegate>
 
 @property (nonatomic, strong) HTMp3AudioRecorder *audioRecorder;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ViewController
+@implementation RecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,7 +61,7 @@
 
 - (NSTimer *)timer {
     if (!_timer) {
-        _timer=[NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(audioPowerChange) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(audioPowerChange) userInfo:nil repeats:YES];
     }
     return _timer;
 }
@@ -101,7 +101,7 @@
     if (![_audioPlayer isPlaying]) {
         NSURL *url = [self savePath];
         NSError *error=nil;
-        _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         if (error) {
             NSLog(@"create player fail：%@", error.localizedDescription);
         }

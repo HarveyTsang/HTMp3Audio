@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		04257D44257BCB8400E5BE56 /* HTMp3Audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04257D43257BCB8400E5BE56 /* HTMp3Audio.framework */; };
 		04257D45257BCB8400E5BE56 /* HTMp3Audio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04257D43257BCB8400E5BE56 /* HTMp3Audio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04B6EC5325811CF100A7FDCE /* FileConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6EC5225811CF100A7FDCE /* FileConvertViewController.m */; };
 		04C63F16257A1631003AE4DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C63F15257A1631003AE4DC /* AppDelegate.m */; };
-		04C63F1C257A1631003AE4DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C63F1B257A1631003AE4DC /* ViewController.m */; };
+		04C63F1C257A1631003AE4DC /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C63F1B257A1631003AE4DC /* RecordViewController.m */; };
 		04C63F1F257A1631003AE4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C63F1D257A1631003AE4DC /* Main.storyboard */; };
 		04C63F21257A1632003AE4DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C63F20257A1632003AE4DC /* Assets.xcassets */; };
 		04C63F24257A1632003AE4DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C63F22257A1632003AE4DC /* LaunchScreen.storyboard */; };
@@ -34,11 +35,13 @@
 /* Begin PBXFileReference section */
 		04257D32257BC99300E5BE56 /* HTMp3Audio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTMp3Audio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04257D43257BCB8400E5BE56 /* HTMp3Audio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTMp3Audio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B6EC5125811CF100A7FDCE /* FileConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileConvertViewController.h; sourceTree = "<group>"; };
+		04B6EC5225811CF100A7FDCE /* FileConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileConvertViewController.m; sourceTree = "<group>"; };
 		04C63F11257A1631003AE4DC /* HTMp3Audio Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HTMp3Audio Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C63F14257A1631003AE4DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C63F15257A1631003AE4DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04C63F1A257A1631003AE4DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04C63F1B257A1631003AE4DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04C63F1A257A1631003AE4DC /* RecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		04C63F1B257A1631003AE4DC /* RecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		04C63F1E257A1631003AE4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04C63F20257A1632003AE4DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C63F23257A1632003AE4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,8 +84,10 @@
 			children = (
 				04C63F14257A1631003AE4DC /* AppDelegate.h */,
 				04C63F15257A1631003AE4DC /* AppDelegate.m */,
-				04C63F1A257A1631003AE4DC /* ViewController.h */,
-				04C63F1B257A1631003AE4DC /* ViewController.m */,
+				04C63F1A257A1631003AE4DC /* RecordViewController.h */,
+				04C63F1B257A1631003AE4DC /* RecordViewController.m */,
+				04B6EC5125811CF100A7FDCE /* FileConvertViewController.h */,
+				04B6EC5225811CF100A7FDCE /* FileConvertViewController.m */,
 				04C63F1D257A1631003AE4DC /* Main.storyboard */,
 				04C63F20257A1632003AE4DC /* Assets.xcassets */,
 				04C63F22257A1632003AE4DC /* LaunchScreen.storyboard */,
@@ -172,8 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C63F1C257A1631003AE4DC /* ViewController.m in Sources */,
+				04C63F1C257A1631003AE4DC /* RecordViewController.m in Sources */,
 				04C63F16257A1631003AE4DC /* AppDelegate.m in Sources */,
+				04B6EC5325811CF100A7FDCE /* FileConvertViewController.m in Sources */,
 				04C63F27257A1632003AE4DC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YX6U4LDB6P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "HTMp3Audio Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YX6U4LDB6P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "HTMp3Audio Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

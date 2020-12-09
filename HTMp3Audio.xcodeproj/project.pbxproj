@@ -11,6 +11,8 @@
 		04257D21257BB90D00E5BE56 /* HTMp3AudioRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04257D1F257BB90D00E5BE56 /* HTMp3AudioRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04257D2D257BC81500E5BE56 /* lame.h in Headers */ = {isa = PBXBuildFile; fileRef = 04257D2B257BC81500E5BE56 /* lame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04257D2E257BC81500E5BE56 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04257D2C257BC81500E5BE56 /* libmp3lame.a */; };
+		04B6EC4B2581158100A7FDCE /* HTMp3FileConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B6EC492581158100A7FDCE /* HTMp3FileConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B6EC4C2581158100A7FDCE /* HTMp3FileConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6EC4A2581158100A7FDCE /* HTMp3FileConverter.m */; };
 		04C63EFF257A1568003AE4DC /* HTMp3Audio.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C63EFD257A1568003AE4DC /* HTMp3Audio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -19,6 +21,8 @@
 		04257D1F257BB90D00E5BE56 /* HTMp3AudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMp3AudioRecorder.h; sourceTree = "<group>"; };
 		04257D2B257BC81500E5BE56 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		04257D2C257BC81500E5BE56 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		04B6EC492581158100A7FDCE /* HTMp3FileConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMp3FileConverter.h; sourceTree = "<group>"; };
+		04B6EC4A2581158100A7FDCE /* HTMp3FileConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMp3FileConverter.m; sourceTree = "<group>"; };
 		04C63EFA257A1568003AE4DC /* HTMp3Audio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMp3Audio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C63EFD257A1568003AE4DC /* HTMp3Audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMp3Audio.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,8 @@
 				04257D2A257BC7D900E5BE56 /* lame */,
 				04257D1F257BB90D00E5BE56 /* HTMp3AudioRecorder.h */,
 				04257D1E257BB90D00E5BE56 /* HTMp3AudioRecorder.m */,
+				04B6EC492581158100A7FDCE /* HTMp3FileConverter.h */,
+				04B6EC4A2581158100A7FDCE /* HTMp3FileConverter.m */,
 				04C63EFD257A1568003AE4DC /* HTMp3Audio.h */,
 			);
 			path = HTMp3Audio;
@@ -88,6 +94,7 @@
 			files = (
 				04257D2D257BC81500E5BE56 /* lame.h in Headers */,
 				04257D21257BB90D00E5BE56 /* HTMp3AudioRecorder.h in Headers */,
+				04B6EC4B2581158100A7FDCE /* HTMp3FileConverter.h in Headers */,
 				04C63EFF257A1568003AE4DC /* HTMp3Audio.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04257D20257BB90D00E5BE56 /* HTMp3AudioRecorder.m in Sources */,
+				04B6EC4C2581158100A7FDCE /* HTMp3FileConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +313,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HTMp3Audio/lame",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.harveyTsang.HTMp3Audio;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
