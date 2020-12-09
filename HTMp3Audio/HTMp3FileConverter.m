@@ -6,7 +6,7 @@
 //
 
 #import "HTMp3FileConverter.h"
-#import "lame.h"
+#import "lame/lame.h"
 #import <AVKit/AVKit.h>
 
 @implementation HTMp3FileConverter
