@@ -38,4 +38,10 @@ Pod::Spec.new do |spec|
     ss.source_files = 'HTMp3Audio/HTMp3AudioRecorder.{h,m}'
   end
 
+  spec.subspec 'FileConvert' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.ios.dependency 'HTMp3Audio/Lame'
+    ss.source_files = 'HTMp3Audio/HTMp3FileConverter.{h,m}'
+  end
+
 end
